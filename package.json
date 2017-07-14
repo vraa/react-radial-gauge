@@ -1,0 +1,27 @@
+{
+  "name": "react-svg-gauge",
+  "version": "0.0.1",
+  "description": "Gauges in React using SVG",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vraa/react-svg-gauge.git"
+  },
+  "keywords": [
+    "react",
+    "gauge",
+    "svg",
+    "graph",
+    "visualization",
+    "meter"
+  ],
+  "author": "Veera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vraa/react-svg-gauge/issues"
+  },
+  "homepage": "https://github.com/vraa/react-svg-gauge#readme"
+}
