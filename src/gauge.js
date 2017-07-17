@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-const TICK_ID = "tick";
+const TICK_ID = 'tick';
 
 class Gauge extends Component {
 
@@ -10,7 +10,7 @@ class Gauge extends Component {
                 cx={opts.cX}
                 cy={opts.cY}
                 r={opts.radius}
-                fill="none"
+                fill='none'
                 stroke={opts.dialColor}
                 strokeWidth={opts.dialWidth}
             >
@@ -39,7 +39,7 @@ class Gauge extends Component {
             tickAngles.push(i);
         }
         return (
-            <g className="ticks">
+            <g className='ticks'>
                 {
                     tickAngles.map((tickAngle, idx) => {
                         return <use
@@ -62,7 +62,7 @@ class Gauge extends Component {
                 cx={opts.cX}
                 cy={opts.cY}
                 r={opts.radius}
-                fill="none"
+                fill='none'
                 stroke={opts.progressColor}
                 strokeWidth={opts.progressWidth}
                 strokeDasharray={opts.circumference}
@@ -100,7 +100,7 @@ class Gauge extends Component {
                     y1={opts.cY}
                     x2={opts.diameter}
                     y2={opts.cY}
-                    fill="none"
+                    fill='none'
                     strokeWidth={opts.needleWidth}
                     stroke={opts.needleColor}
                 />
@@ -108,7 +108,7 @@ class Gauge extends Component {
         }
 
         return (
-            <g className="needle">
+            <g className='needle'>
                 <g transform={`rotate(${needleAngle} ${opts.cX} ${opts.cY})`}>
                     {needleElm}
                 </g>
@@ -148,18 +148,21 @@ class Gauge extends Component {
 
         return (
             <svg
+                xmlns='http://www.w3.org/2000/svg'
+                className={opts.className}
                 height={size}
                 width={size}
                 viewBox={`0 0 ${size} ${size}`}
-                transform="rotate(-90)"
             >
                 <defs>
                     {this.defineTick(opts)}
                 </defs>
-                {this.renderDial(opts)}
-                {this.renderTicks(opts)}
-                {this.renderProgress(opts)}
-                {this.renderNeedle(opts)}
+                <g transform={`rotate(-90 ${cX} ${cY})`}>
+                    {this.renderDial(opts)}
+                    {this.renderTicks(opts)}
+                    {this.renderProgress(opts)}
+                    {this.renderNeedle(opts)}
+                </g>
             </svg>
         )
     }
@@ -169,19 +172,19 @@ Gauge.defaultProps = {
     size: 200,
 
     dialWidth: 10,
-    dialColor: "#eee",
+    dialColor: '#eee',
 
     tickLength: 3,
     tickWidth: 1,
-    tickColor: "#cacaca",
+    tickColor: '#cacaca',
     tickInterval: 10,
 
     maximumValue: 100,
     currentValue: 25,
     progressWidth: 5,
-    progressColor: "#3d3d3d",
+    progressColor: '#3d3d3d',
     progressRoundedEdge: true,
-    downProgressColor: "red",
+    downProgressColor: 'red',
 
     needle: true,
     needleBaseSize: 5,
