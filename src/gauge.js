@@ -124,6 +124,22 @@ class Gauge extends Component {
 
     };
 
+    renderText = (opts) => {
+        return (
+            <text
+                x={opts.cX}
+                y={opts.cY + 55}
+                fontFamily={opts.progressFont}
+                fontSize={opts.progressFontSize}
+                transform={`rotate(90 ${opts.cX} ${opts.cY})`}
+                textAnchor="middle"
+                fill={opts.progressColor}
+            >
+                {opts.currentValue}
+            </text>
+        )
+    };
+
     render() {
 
         let opts = Object.assign({}, this.props);
@@ -162,6 +178,7 @@ class Gauge extends Component {
                     {this.renderTicks(opts)}
                     {this.renderProgress(opts)}
                     {this.renderNeedle(opts)}
+                    {this.renderText(opts)}
                 </g>
             </svg>
         )
@@ -185,6 +202,8 @@ Gauge.defaultProps = {
     progressColor: '#3d3d3d',
     progressRoundedEdge: true,
     downProgressColor: 'red',
+    progressFont: 'Serif',
+    progressFontSize: '40',
 
     needle: true,
     needleBaseSize: 5,
