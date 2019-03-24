@@ -1,6 +1,6 @@
 {
   "name": "react-radial-gauge",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Gauges in React using SVG",
   "main": "dist/gauge.js",
   "scripts": {
