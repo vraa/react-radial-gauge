@@ -55,7 +55,7 @@ class Gauge extends Component {
 
     renderProgress = (opts) => {
 
-        let offset = (opts.circumference * (1 - (opts.currentValue / 100)));
+        let offset = (opts.circumference * (1 - (opts.currentValue / opts.maximumValue)));
 
         return (
             <circle
@@ -81,7 +81,7 @@ class Gauge extends Component {
             y2 = opts.cY + (opts.needleWidth / 2),
             x3 = opts.diameter,
             y3 = opts.cY,
-            needleAngle = (360 * opts.currentValue) / 100;
+            needleAngle = (360 * opts.currentValue) / opts.maximumValue;
 
         let needleElm = null;
         if (opts.needleSharp) {
