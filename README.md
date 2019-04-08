@@ -39,9 +39,14 @@ You can pass in the below props to the `<Gauge/>` component to customize the Rad
 | dialColor| Color of the radial dial| Hex code  |
 | progressWidth| Size of the progress bar | Integer |
 | progressColor| Color of the progress bar | Hex code |
+| progressTextColor| Color of the progress text, if empty default to progressColor | Hex code |
+| progressRotation| Rotate the progress bar start | Integer |
+| progressFontUnits | Units to be displayed with the progress indicator (ie: mph, F/C) | String |
+| renderTicks| Should the ticks be rendered | true / false |
 | tickLength| Length of the ticks | Integer|
 | tickWidth| Width of the ticks | Integer|
 | tickColor| Color of the ticks | Hex code |
+| renderNeedle| Should the needle and base be rendered | true / false |
 | needleColor| Color of the needle | Hex code |
 | needleBaseSize| Needle base size | Integer|
 | needleBaseColor| Needle base color | Hex code |
