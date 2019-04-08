@@ -34,7 +34,8 @@ You can pass in the below props to the `<Gauge/>` component to customize the Rad
 | prop | Description | Value |
 |------|-------------|------|
 | size | Size of the gauge. 200 Will render a 200x200 Gauge. | Integer |
-|currentValue | Gauges value. The progress and needle will be rendered according to this value. | Integer (1 to 100) |
+|currentValue | Gauges value. The progress and needle will be rendered according to this value. | Integer (1 to max value) |
+|maximumValue | Max Gauges Value. The ticks, progress and needle will be rendered according to this value. | Integer (default: 100) |
 | dialWidth|  Size of the radial dial| Integer |
 | dialColor| Color of the radial dial| Hex code  |
 | progressWidth| Size of the progress bar | Integer |
