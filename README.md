@@ -47,6 +47,9 @@ You can pass in the below props to the `<Gauge/>` component to customize the Rad
 | needleBaseColor| Needle base color | Hex code |
 | needleWidth| Width of the needle | Integer|
 | needleSharp| Should the needle be arrow or a line. If true, an arrow will be drawn, else a line.| true / false |
+| progressFontColor| What color should the text be for current value.| Hex code |
+| progressFontSize| How big should the text be for the current value.| Integer |
+| progressFontPosition| Should the progress text be positioned in the center or the bottom of the gauge.| "center / false |
 
 
 
