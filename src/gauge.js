@@ -128,7 +128,7 @@ class Gauge extends Component {
         return (
             <text
                 x={opts.cX}
-                y={opts.cY + 55}
+                y={opts.progressFontPosition && opts.progressFontPosition == 'center' ? (opts.size/2) + 20 : opts.cY + 55}
                 fontFamily={opts.progressFont}
                 fontSize={opts.progressFontSize}
                 transform={`rotate(90 ${opts.cX} ${opts.cY})`}
