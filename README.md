@@ -1,4 +1,6 @@
-# React Radial Gauge
+# React Radial Gauge 2
+
+This is a fork of the original react-radial-gauge repository with some additional progress font options.
 
 ![Gauge 1](https://veerasundar.com/img/gauges/opt-1.png) ![Gauge 2](https://veerasundar.com/img/gauges/opt-2.png) ![Gauge 3](https://veerasundar.com/img/gauges/opt-3.png)
 
@@ -7,13 +9,13 @@ Create beautiful gauges in React. Customize each part of the gauge components to
 ## Installation
 
 ```javascript
-npm install react-radial-gauge
+npm install rgauge
 ```
 
 ## Usage
 
 ```javascript
-import Gauge from 'react-radial-gauge';
+import Gauge from 'rgauge';
 
 class AwesomeComponent esteds React.Component {
     render() {
