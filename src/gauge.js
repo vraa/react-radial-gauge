@@ -125,10 +125,27 @@ class Gauge extends Component {
     };
 
     renderText = (opts) => {
+        let paddingTop, y;
+        if(opts.progressFontPaddingTop){
+            paddingTop = opts.progressFontPaddingTop;
+        } else {
+            if(opts.progressFontPosition && opts.progressFontPosition == 'center'){
+                paddingTop = 20;
+            } else {
+                paddingTop = 55;
+            }
+        }
+
+        if(opts.progressFontPosition && opts.progressFontPosition == 'center'){
+            y =  (opts.size/2) + paddingTop ;
+        } else {
+            y = opts.cY + paddingTop;
+        }
+
         return (
             <text
                 x={opts.cX}
-                y={opts.cY + 55}
+                y={y}
                 fontFamily={opts.progressFont}
                 fontSize={opts.progressFontSize}
                 transform={`rotate(90 ${opts.cX} ${opts.cY})`}

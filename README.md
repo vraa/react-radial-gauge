@@ -1,4 +1,6 @@
-# React Radial Gauge
+# React Radial Gauge 2
+
+This is a fork of the original react-radial-gauge repository with some additional progress font options.
 
 ![Gauge 1](https://veerasundar.com/img/gauges/opt-1.png) ![Gauge 2](https://veerasundar.com/img/gauges/opt-2.png) ![Gauge 3](https://veerasundar.com/img/gauges/opt-3.png)
 
@@ -7,13 +9,13 @@ Create beautiful gauges in React. Customize each part of the gauge components to
 ## Installation
 
 ```javascript
-npm install react-radial-gauge
+npm install rgauge
 ```
 
 ## Usage
 
 ```javascript
-import Gauge from 'react-radial-gauge';
+import Gauge from 'rgauge';
 
 class AwesomeComponent esteds React.Component {
     render() {
@@ -47,6 +49,9 @@ You can pass in the below props to the `<Gauge/>` component to customize the Rad
 | needleBaseColor| Needle base color | Hex code |
 | needleWidth| Width of the needle | Integer|
 | needleSharp| Should the needle be arrow or a line. If true, an arrow will be drawn, else a line.| true / false |
+| progressFontColor| What color should the text be for current value.| Hex code |
+| progressFontSize| How big should the text be for the current value.| Integer |
+| progressFontPosition| Should the progress text be positioned in the center or the bottom of the gauge.| "center / false |
 
 
 
